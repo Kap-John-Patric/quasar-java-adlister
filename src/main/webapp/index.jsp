@@ -30,7 +30,7 @@
     <br>
     <div class="container">
         <h4 >Register here if you are an Artist and want to create your own Ad and start building your new FanBase!</h4>
-        <form action="/register">
+        <form action="/artist-register">
             <input type="submit" class="btn btn-primary" value="Artist Registration">
         </form>
     </div>
