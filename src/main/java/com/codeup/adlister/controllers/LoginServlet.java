@@ -41,8 +41,6 @@ public class LoginServlet extends HttpServlet {
 //            response.getWriter().println("Invalid login");
 
         }
-        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
-
     }
 }
 

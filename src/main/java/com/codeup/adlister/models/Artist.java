@@ -15,6 +15,12 @@ public class Artist {
         this.bandName = bandName;
     }
 
+    public Artist(String firstName, String lastName, String bandName) {
+        this.bandName = bandName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public long getId() {
         return id;
     }
