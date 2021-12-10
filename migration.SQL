@@ -1,4 +1,4 @@
-git USE adlister_db;
+USE adlister_db;
 
 DROP TABLE IF EXISTS concert;
 DROP TABLE IF EXISTS users;
