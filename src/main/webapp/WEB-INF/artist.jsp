@@ -25,16 +25,27 @@
             </div>
         </div>
         <div class="col-md-4 mb-3">
-            <label for="validationCustomUsername">Band/Artist Name</label>
+            <label for="validationCustomUsername">Username</label>
             <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                </div>
-                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" required>
                 <div class="invalid-feedback">
-                    Please Enter your band/Artist name.
+                    Please Enter your Username.
                 </div>
             </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustomPassword">Password</label>
+            <input id="validationCustomPassword" name="password" class="form-control" type="password" placeholder="Password" required>
+            <div class="invalid-feedback">
+                Please Enter a Password.
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationConfirm_password">Confirm Password</label>
+            <input id="validationConfirm_password" name="confirm_password" class="form-control" type="password" placeholder="Confirm Password">
+        <div class="invalid-feedback">
+            Please confirm your password matches.
+        </div>
         </div>
     </div>
     <div class="form-row">
@@ -60,7 +71,7 @@
             </div>
         </div>
     </div>
-    <div class="form-group">
+    <div class="col-md-12 mb-4">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
             <label class="form-check-label" for="invalidCheck">
@@ -71,7 +82,10 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <div class="col-md-12 mb-3">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+
 </form>
 
 <script>

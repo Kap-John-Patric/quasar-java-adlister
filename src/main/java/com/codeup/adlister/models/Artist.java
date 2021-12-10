@@ -1,12 +1,23 @@
 package com.codeup.adlister.models;
 
+import com.codeup.adlister.util.Password;
+
 public class Artist {
     private long id;
     private String firstName;
     private String lastName;
     private String bandName;
+    private String username;
+    private String password;
 
     public Artist(){}
+
+    public Artist(String firstName, String lastName, String username, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        setPassword(password);
+    }
 
     public Artist(long id, String firstName, String lastName, String bandName) {
         this.id = id;
@@ -19,6 +30,7 @@ public class Artist {
         this.bandName = bandName;
         this.firstName = firstName;
         this.lastName = lastName;
+
     }
 
     public long getId() {
@@ -51,5 +63,21 @@ public class Artist {
 
     public void setBandName(String bandName) {
         this.bandName = bandName;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = Password.hash(password);
     }
 }
