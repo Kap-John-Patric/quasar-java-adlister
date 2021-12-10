@@ -32,7 +32,7 @@
                 </div>
                 <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
                 <div class="invalid-feedback">
-                    Please choose a username.
+                    Please Enter your band/Artist name.
                 </div>
             </div>
         </div>
