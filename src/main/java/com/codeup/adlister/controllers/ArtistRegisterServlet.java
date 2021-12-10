@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.Artist;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -15,29 +16,28 @@ import java.io.IOException;
 @WebServlet(name = "controllers.RegisterServlet", urlPatterns = "/artist-register")
 public class ArtistRegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/artist.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String username = request.getParameter("username");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        String passwordConfirmation = request.getParameter("confirm_password");
+        String firstName = request.getParameter("FirstName");
+        String lastName = request.getParameter("LastName");
+        String bandName = request.getParameter("BandName");
 
         // validate input
-        boolean inputHasErrors = username.isEmpty()
-                || email.isEmpty()
-                || password.isEmpty()
-                || (! password.equals(passwordConfirmation));
+        boolean inputHasErrors = bandName.isEmpty()
+                || firstName.isEmpty()
+                || lastName.isEmpty();
+
 
         if (inputHasErrors) {
             response.sendRedirect("/artist-register");
             return;
         }
 
-        // create and save a new user
-        User user = new User(username, email, password);
-        DaoFactory.getUsersDao().insert(user);
+        // create and save a new artist
+        Artist artist = new Artist(firstName, lastName, bandName);
+        DaoFactory.getArtistsDao().insert(artist);
         response.sendRedirect("/artist-profile");
     }
 
