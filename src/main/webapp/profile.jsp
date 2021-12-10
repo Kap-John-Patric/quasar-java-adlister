@@ -15,7 +15,7 @@
         <p>Genre</p>
         <p>Concert Dates</p>
         <p>Concert Locations</p>
-        <p>p</p>
+
     </div>
 
 </body>
