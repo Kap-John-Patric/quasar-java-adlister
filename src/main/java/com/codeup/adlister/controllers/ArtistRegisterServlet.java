@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(name = "controllers.RegisterServlet", urlPatterns = "/artist-register")
+@WebServlet(name = "controllers.ArtistRegisterServlet", urlPatterns = "/artist-register")
 public class ArtistRegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/artist.jsp").forward(request, response);
