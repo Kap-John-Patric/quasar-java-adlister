@@ -26,7 +26,7 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password">
             </div>
-            <a href="/profile"><input type="submit" class="btn btn-primary btn-block"></a>
+            <a href="/profile.jsp"><input type="submit" class="btn btn-primary btn-block"></a>
         </form>
     </div>
 </body>
