@@ -32,6 +32,18 @@ CREATE TABLE location (
         ON DELETE CASCADE
 );
 
+CREATE TABLE artist (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    user_id INT UNSIGNED NOT NULL ,
+    artist_name VARCHAR(240) NOT NULL,
+    genre VARCHAR(240) NOT NULL,
+    concert_date DATE,
+    ticket_price FLOAT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+    ON DELETE CASCADE
+);
+
 
 
 
