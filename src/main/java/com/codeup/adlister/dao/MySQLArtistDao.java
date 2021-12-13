@@ -53,7 +53,22 @@ public class MySQLArtistDao implements Artists {
 
     @Override
     public Long insert(Artist artists) {
-        return null;
+        String query = "INSERT INTO artist(userId, username, firstName,lastName, email, password) VALUES (?, ?, ?, ?, ?, ?)";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, artists.getUserId());
+            stmt.setString(2, artists.getUsername());
+            stmt.setString(3, artists.getFirstName());
+            stmt.setString(4, artists.getLastName());
+            stmt.setString(5, artists.getEmail());
+            stmt.setString(6, artists.getPassword());
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+            return rs.getLong(1);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating new user", e);
+        }
     }
 
     @Override

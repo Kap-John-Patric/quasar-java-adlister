@@ -8,18 +8,19 @@
 <body>
 
 <%--    Bootstrap form with valid/invalid inputs--%>
-<form action="/profile.jsp" method="post" class="needs-validation" novalidate>
+<form action="/artist-register" method="post" class="needs-validation" novalidate>
     <div class="form-row">
         <div class="col-md-4 mb-3">
+
             <label for="validationCustom01">First name</label>
-            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+            <input name="firstName" type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
             <div class="invalid-feedback">
                 Please provide your first name.
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <label for="validationCustom02">Last name</label>
-            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+            <input name="lastName" type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
             <div class="invalid-feedback">
                 Please enter your last name.
             </div>
@@ -27,7 +28,7 @@
         <div class="col-md-4 mb-3">
             <label for="validationCustomUsername">Username</label>
             <div class="input-group">
-                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" required>
+                <input name="userName" type="text" class="form-control" id="validationCustomUsername" placeholder="Username" required>
                 <div class="invalid-feedback">
                     Please Enter your Username.
                 </div>
@@ -35,17 +36,25 @@
         </div>
         <div class="col-md-4 mb-3">
             <label for="validationCustomPassword">Password</label>
-            <input id="validationCustomPassword" name="password" class="form-control" type="password" placeholder="Password" required>
+            <input name="password" id="validationCustomPassword" class="form-control" type="password" placeholder="Password" required>
             <div class="invalid-feedback">
                 Please Enter a Password.
             </div>
         </div>
+
         <div class="col-md-4 mb-3">
             <label for="validationConfirm_password">Confirm Password</label>
-            <input id="validationConfirm_password" name="confirm_password" class="form-control" type="password" placeholder="Confirm Password">
+            <input id="validationConfirm_password" name="confirmPassword" class="form-control" type="password" placeholder="Confirm Password">
         <div class="invalid-feedback">
             Please confirm your password matches.
         </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationEmail">Email</label>
+            <input name="eMail" id="validationEmail" class="form-control" type="text" placeholder="Email Address" required>
+            <div class="invalid-feedback">
+                Please enter an email.
+            </div>
         </div>
     </div>
     <div class="form-row">
