@@ -56,7 +56,17 @@ public class MySQLAdsDao implements Concerts {
 
     @Override
     public List<Concert> searchAds(String name) {
-        return null;
+        PreparedStatement stmt;
+        try {
+            String searchQuery = "SELECT * FROM artist WHERE username LIKE ?";
+            String  searchName = "%" + name + "%";
+            stmt = connection.prepareStatement(searchQuery);
+            stmt.setString(1, searchName);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving searched names.", e);
+        }
     }
 
     private Concert extractConcert(ResultSet rs) throws SQLException {
