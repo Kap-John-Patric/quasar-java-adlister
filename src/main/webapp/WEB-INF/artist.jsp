@@ -8,7 +8,7 @@
 <body>
 
 <%--    Bootstrap form with valid/invalid inputs--%>
-<form action="/ads/create" method="post" class="needs-validation" novalidate>
+<form action="/profile.jsp" method="post" class="needs-validation" novalidate>
     <div class="form-row">
         <div class="col-md-4 mb-3">
             <label for="validationCustom01">First name</label>
