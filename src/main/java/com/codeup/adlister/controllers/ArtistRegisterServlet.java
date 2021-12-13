@@ -21,14 +21,14 @@ public class ArtistRegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String firstName = request.getParameter("FirstName");
         String lastName = request.getParameter("LastName");
-        String userName = request.getParameter("username");
+        String username = request.getParameter("username");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
 
         // validate input
         boolean inputHasErrors = firstName.isEmpty()
                 || lastName.isEmpty()
-                || userName.isEmpty()
+                || username.isEmpty()
                 || password.isEmpty()
                 || (!password.equals(passwordConfirmation));
 
@@ -39,9 +39,9 @@ public class ArtistRegisterServlet extends HttpServlet {
         }
 
         // create and save a new artist
-        Artist artist = new Artist(firstName, lastName, userName);
+        Artist artist = new Artist(firstName, lastName, username);
         DaoFactory.getArtistsDao().insert(artist);
-        response.sendRedirect("/artist-profile");
+        response.sendRedirect("/profile.jsp");
     }
 
 
