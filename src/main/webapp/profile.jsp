@@ -10,7 +10,7 @@
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
-        <form>
+        <form action="/artist" method="post">
         <div class ="form-group">
             <label for="artist">Artist Name</label>
             <input id="artist" name="artist" class="form-control" type="text">
