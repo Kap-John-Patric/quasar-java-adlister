@@ -16,4 +16,12 @@ public class ViewProfileServlet extends HttpServlet {
         }
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String artistname = request.getParameter("artistname");
+        String genre = request.getParameter("genre");
+        Integer concertdate = Integer.valueOf(request.getParameter("concertdate"));
+        String location = request.getParameter("location");
+        Integer ticketprice = Integer.valueOf(request.getParameter("ticketprice"));
+    }
 }

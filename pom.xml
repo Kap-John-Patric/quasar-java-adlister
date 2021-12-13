@@ -44,6 +44,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.25</version>
         </dependency>
+        <dependency>
+            <groupId>com.mapbox.mapboxsdk</groupId>
+            <artifactId>mapbox-sdk-core</artifactId>
+            <version>5.9.0-alpha.1</version>
+        </dependency>
     </dependencies>
 
 </project>

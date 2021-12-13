@@ -21,7 +21,7 @@
             </div>
             <div class ="form-group">
                 <label for="concert_date">Concert Dates</label>
-                <input id="concert_date" name="concert_date" class="form-control" type="text">
+                <input id="concert_date" name="concert_date" class="form-control" type="text" placeholder="YEAR-MM-DD">
             </div>
             <div class ="form-group">
                 <label for="location">Locations</label>
