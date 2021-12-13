@@ -4,16 +4,16 @@ import com.codeup.adlister.Config;
 import com.codeup.adlister.models.Artist;
 
 public class DaoFactory {
-    private static Ads adsDao;
+    private static Concerts concertDao;
     private static Users usersDao;
     private static Artists artistsDao;
     private static Config config = new Config();
 
-    public static Ads getAdsDao() {
-        if (adsDao == null) {
-            adsDao = new MySQLAdsDao(config);
+    public static Concerts getConcertDao() {
+        if (concertDao == null) {
+            concertDao = (Concerts) new MySQLAdsDao(config);
         }
-        return adsDao;
+        return concertDao;
     }
 
     public static Users getUsersDao() {
