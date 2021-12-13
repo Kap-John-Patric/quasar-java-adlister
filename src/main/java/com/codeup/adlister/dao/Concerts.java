@@ -9,4 +9,6 @@ public interface Concerts {
     List<Concert> all();
     // insert a new ad and return the new ad's id
     Long insert(Concert concert);
+
+    List<Concert> searchAds(String name);
 }

@@ -54,6 +54,11 @@ public class MySQLAdsDao implements Concerts {
         }
     }
 
+    @Override
+    public List<Concert> searchAds(String name) {
+        return null;
+    }
+
     private Concert extractConcert(ResultSet rs) throws SQLException {
         return new Concert(
             rs.getLong("id"),
