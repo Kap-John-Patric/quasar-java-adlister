@@ -2,7 +2,7 @@ USE adlister_db;
 
 DROP TABLE IF EXISTS concert;
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS ads;
+DROP TABLE IF EXISTS artist;
 
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -15,6 +15,7 @@ CREATE TABLE users (
 CREATE TABLE concert (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,
+    username VARCHAR(240) NOT NULL,
     title VARCHAR(240) NOT NULL,
     description TEXT NOT NULL,
     PRIMARY KEY (id),
@@ -35,7 +36,9 @@ CREATE TABLE location (
 CREATE TABLE artist (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL ,
-    artist_name VARCHAR(240) NOT NULL,
+    username VARCHAR(240) NOT NULL,
+    email VARCHAR(240) NOT NUll,
+    password VARCHAR(240) NOT NULL,
     genre VARCHAR(240) NOT NULL,
     concert_date DATE,
     ticket_price FLOAT,

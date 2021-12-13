@@ -6,7 +6,7 @@ import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
 
-public class MySQLUsersDao implements Users {
+public class MySQLUsersDao implements Users{
     private Connection connection;
 
     public MySQLUsersDao(Config config) {
@@ -25,7 +25,7 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public User findByUsername(String username) {
-        String query = "SELECT * FROM users WHERE username = ? LIMIT 1";
+        String query = "SELECT * FROM artist WHERE username = ? LIMIT 1";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, username);
