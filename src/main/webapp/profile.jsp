@@ -10,7 +10,7 @@
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
-        <form action="/artist" method="post">
+        <form action="/profile" method="post">
         <div class ="form-group">
             <label for="artist">Artist Name</label>
             <input id="artist" name="artist" class="form-control" type="text">
@@ -35,6 +35,15 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
+    <div class="container">
+        <h1>Here Are all the Concerts!</h1>
 
+        <c:forEach var="concert" items="${concert}">
+            <div class="col-md-6">
+                <h2>${concert.genre}</h2>
+                <p>${concert.email}</p>
+            </div>
+        </c:forEach>
+    </div>
 </body>
 </html>
