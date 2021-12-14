@@ -10,8 +10,8 @@
         <h1>Setup your next Concert</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
-                <label for="username">Username</label>
-                <input id="username" name="username" class="form-control" type="text">
+                <label for="groupName">Artist Name</label>
+                <input id="groupName" name="groupName" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <label for="title">Title</label>
@@ -20,6 +20,19 @@
             <div class="form-group">
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
+            </div>
+            <div class ="form-group">
+                <label for="location">Locations</label>
+                <input id="location" name="location" class="form-control" type="text">
+            </div>
+            <div class ="form-group">
+                <label for="concert_date">Concert Date</label>
+                <input id="concert_date" name="concert_date" class="form-control" type="text" placeholder="YEAR-MM-DD">
+            </div>
+
+            <div class ="form-group">
+                <label for="ticket_price">Ticket Price</label>
+                <input id="ticket_price" name="ticket_price" class="form-control">
             </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
