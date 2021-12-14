@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Artist;
+import com.codeup.adlister.models.Concert;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -26,12 +27,15 @@ public class ViewProfileServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-//        String artistname = request.getParameter("artistname");
-//        String genre = request.getParameter("genre");
-//        Integer concert_date = Integer.valueOf(request.getParameter("concert_date"));
-//        String location = request.getParameter("location");
-//        Integer ticketprice = Integer.valueOf(request.getParameter("ticketprice"));
+        String username = request.getParameter("username");
+        String genre = request.getParameter("genre");
+        String concert_date = request.getParameter("concert_date");
+        String location = request.getParameter("location");
+        String ticketprice = request.getParameter("ticketprice");
 
+        Concert concert = new Concert(username,genre,concert_date,location,ticketprice);
+        DaoFactory.getConcertDao().insert(concert);
+        response.sendRedirect("/profile");
     }
 
 }

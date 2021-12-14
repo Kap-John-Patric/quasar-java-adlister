@@ -33,6 +33,9 @@ public class Concert {
         this.ticketPrice = ticketPrice;
     }
 
+    public Concert(String artistname, String genre, String concert_date, String location, String ticketprice) {
+    }
+
 
     public long getUser_id() {
         return user_id;

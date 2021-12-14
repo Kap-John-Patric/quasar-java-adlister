@@ -36,11 +36,11 @@
         </form>
     </div>
     <div class="container">
-        <h1>Here Are all the Concerts!</h1>
+        <h1>Here are all the Concerts!</h1>
 
         <c:forEach var="concert" items="${concert}">
-            <div class="col-md-6">
-                <h2>${concert.genre}</h2>
+            <div>
+                <h2>${concert.username}</h2>
                 <p>${concert.email}</p>
             </div>
         </c:forEach>
