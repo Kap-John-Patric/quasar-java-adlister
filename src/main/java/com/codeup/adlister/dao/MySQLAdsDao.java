@@ -39,7 +39,7 @@ public class MySQLAdsDao implements Concerts {
 
     public Long insert(Concert concert) {
         try {
-            String insertQuery = "INSERT INTO concert(userId, groupName, title, description, ticketPrice, concertDate) VALUES (?, ?, ?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO concert(userId, groupName, title, description) VALUES (?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, concert.getUser_id());
             stmt.setString(2, concert.getGroupName());
