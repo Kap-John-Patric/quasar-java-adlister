@@ -15,14 +15,14 @@ import java.io.IOException;
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
-            response.sendRedirect("/profile");
-            return;
+            response.sendRedirect("/login");
+
         }
-//        User current =(User) request.getSession().getAttribute("user");
-//        Artist current;
-//        long userid = current.getId();
-//        request.setAttribute("ads", DaoFactory.getAdsDao().usersAds(int) userId);
+//        User current = (User) request.getSession().getAttribute("user");
+//        long userId = current.getId();
+//        request.setAttribute("ads", DaoFactory.getAdsDao().usersAds(int) userId));
 //        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -31,6 +31,7 @@ public class ViewProfileServlet extends HttpServlet {
 //        Integer concert_date = Integer.valueOf(request.getParameter("concert_date"));
 //        String location = request.getParameter("location");
 //        Integer ticketprice = Integer.valueOf(request.getParameter("ticketprice"));
+
     }
 
 }

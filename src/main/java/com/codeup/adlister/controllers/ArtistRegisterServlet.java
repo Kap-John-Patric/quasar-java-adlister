@@ -41,7 +41,7 @@ public class ArtistRegisterServlet extends HttpServlet {
         // create and save a new artist
         Artist artist = new Artist(firstName, lastName, username);
         DaoFactory.getArtistsDao().insert(artist);
-        response.sendRedirect("/profile.jsp");
+        response.sendRedirect("/profile");
     }
 
 
