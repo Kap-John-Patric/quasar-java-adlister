@@ -2,28 +2,29 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.Config;
 import com.codeup.adlister.models.Artist;
+import com.codeup.adlister.models.Concert;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.List;
 
 public class MySQLArtistDao implements Artists {
-        private Connection connection;
+    private Connection connection;
 
-        public MySQLArtistDao(Config config){
-            try {
-                DriverManager.registerDriver(new Driver());
-                connection = DriverManager.getConnection(
-                        config.getUrl(),
-                        config.getUser(),
-                        config.getPassword()
-                );
-            } catch (SQLException e) {
-                throw new RuntimeException("Error connecting to the database!", e);
-            }
+    public MySQLArtistDao(Config config) {
+        try {
+            DriverManager.registerDriver(new Driver());
+            connection = DriverManager.getConnection(
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException("Error connecting to the database!", e);
         }
-
+    }
 
 
     @Override
@@ -68,6 +69,11 @@ public class MySQLArtistDao implements Artists {
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
         }
+    }
+
+    @Override
+    public List<Concert> searchAds(String name) {
+        return null;
     }
 
 }

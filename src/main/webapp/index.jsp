@@ -13,25 +13,23 @@
     </div>
     <br>
     <div class="container">
-        <h4>Returning user?</h4>
-        <form action="/login">
-            <input type="submit" class="btn btn-primary" value="Log In Here">
-        </form>
-
-    </div>
-    <br>
-    <div class="container">
         <h4 >Register here to join as a customer and find your next artist's concert!</h4>
         <form action="/register">
             <input type="submit" class="btn btn-primary" value="Customer Registration">
         </form>
-
     </div>
     <br>
     <div class="container">
         <h4 >Register here if you are an Artist and want to create your own Ad and start building your new FanBase!</h4>
         <form action="/artist-register">
             <input type="submit" class="btn btn-primary" value="Artist Registration">
+        </form>
+    </div>
+    <br>
+    <div class="container">
+        <h4>Returning user?</h4>
+        <form action="/login">
+            <input type="submit" class="btn btn-primary" value="Log In Here">
         </form>
     </div>
 <%--    <li><a href="/login">Login</a></li>--%>
