@@ -7,8 +7,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Create a new Ad</h1>
+        <h1>Setup your next Concert</h1>
         <form action="/ads/create" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input id="username" name="username" class="form-control" type="text">
+            </div>
             <div class="form-group">
                 <label for="title">Title</label>
                 <input id="title" name="title" class="form-control" type="text">
