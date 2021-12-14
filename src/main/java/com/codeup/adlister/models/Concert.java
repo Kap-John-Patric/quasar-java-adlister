@@ -35,7 +35,6 @@ public class Concert {
     public Concert(long id, String groupName, String string, java.sql.Date concertDate, String title, String description) {
     }
 
-
     public long getUser_id() {
         return user_id;
     }
@@ -91,4 +90,10 @@ public class Concert {
     public void setTicketPrice(float ticketPrice) {
         this.ticketPrice = ticketPrice;
     }
+
 }
+
+
+
+
+
