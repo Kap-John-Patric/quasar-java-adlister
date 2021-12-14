@@ -17,7 +17,7 @@ CREATE TABLE users (
 CREATE TABLE concert (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     userId INT UNSIGNED NOT NULL,
-    username VARCHAR(240) NOT NULL,
+    groupName VARCHAR(240) NOT NULL,
     title VARCHAR(240) NOT NULL,
     description TEXT NOT NULL,
     concertDate DATE,
