@@ -1,36 +1,38 @@
 package com.codeup.adlister.models;
 
+import java.util.Date;
+
 public class Concert {
     private long user_id;
     private long id;
-    private String username;
-    private String bandName;
+    private String groupName;
     private String title;
     private String description;
-    private String location;
+    private Date concertDate;
     private float ticketPrice;
 
-    public Concert(long user_id, String username, String title, String description) {
+    public Concert(long user_id, long id, String groupName, String title, String description, Date concertDate, float ticketPrice) {
         this.user_id = user_id;
-        this.username = username;
-        this.title = title;
-        this.description = description;
-
-    }
-
-    public Concert(long id, String title, String description) {
         this.id = id;
+        this.groupName = groupName;
+        this.title = title;
+        this.description = description;
+        this.concertDate = concertDate;
+        this.ticketPrice = ticketPrice;
+    }
+
+    public Concert(long id, String groupName, String title, String description) {
+        this.id = id;
+        this.groupName = groupName;
         this.title = title;
         this.description = description;
     }
 
-    public Concert(long user_id, String username, String location, String title, String description, float ticketPrice) {
-        this.user_id = user_id;
-        this.username = username;
-        this.location = location;
-        this.title = title;
-        this.description = description;
-        this.ticketPrice = ticketPrice;
+//    public Concert(long id, String groupName, String string, String concertDate, String title, String description) {
+//
+//    }
+
+    public Concert(long id, String groupName, String string, java.sql.Date concertDate, String title, String description) {
     }
 
 
@@ -46,24 +48,16 @@ public class Concert {
         return id;
     }
 
-    public void setId(long userId) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getGroupName() {
+        return groupName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getBandName() {
-        return bandName;
-    }
-
-    public void setBandName(String bandName) {
-        this.bandName = bandName;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
     public String getTitle() {
@@ -82,12 +76,12 @@ public class Concert {
         this.description = description;
     }
 
-    public String getLocation() {
-        return location;
+    public Date getconcertDate() {
+        return concertDate;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setconcertDate(Date concertDate) {
+        this.concertDate = concertDate;
     }
 
     public float getTicketPrice() {
