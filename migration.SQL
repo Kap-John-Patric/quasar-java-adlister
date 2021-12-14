@@ -22,9 +22,9 @@ CREATE TABLE concert (
     description TEXT NOT NULL,
     concertDate DATE,
     ticketPrice FLOAT,
-    PRIMARY KEY (id),
-    FOREIGN KEY (userId) REFERENCES users(id)
-        ON DELETE CASCADE
+    PRIMARY KEY (id)
+#     FOREIGN KEY (userId) REFERENCES users(id)
+#         ON DELETE CASCADE
 );
 
 CREATE TABLE location (
