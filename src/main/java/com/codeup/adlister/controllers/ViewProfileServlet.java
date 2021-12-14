@@ -33,9 +33,9 @@ public class ViewProfileServlet extends HttpServlet {
         String location = request.getParameter("location");
         String ticketprice = request.getParameter("ticketprice");
 
-        Concert concert = new Concert(username,genre,concert_date,location,ticketprice);
-        DaoFactory.getConcertDao().insert(concert);
-        response.sendRedirect("/profile");
+//        Concert concert = new Concert(username,genre,concert_date,location,ticketprice);
+//        DaoFactory.getConcertDao().insert(concert);
+//        response.sendRedirect("/profile");
     }
 
 }
