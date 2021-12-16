@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">Artist-Lister Welcome Page</a>
+            <a class="navbar-brand" href="/">Live and local Welcome Page</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/login">Login</a></li>
