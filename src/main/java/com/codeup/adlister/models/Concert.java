@@ -28,9 +28,6 @@ public class Concert {
         this.description = description;
     }
 
-//    public Concert(long id, String groupName, String string, String concertDate, String title, String description) {
-//
-//    }
 
     public Concert(long id, String groupName, String string, java.sql.Date concertDate, String title, String description) {
     }

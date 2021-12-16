@@ -23,8 +23,6 @@ CREATE TABLE concert (
     concertDate DATE,
     ticketPrice FLOAT,
     PRIMARY KEY (id)
-#     FOREIGN KEY (userId) REFERENCES users(id)
-#         ON DELETE CASCADE
 );
 
 CREATE TABLE location (
@@ -46,8 +44,6 @@ CREATE TABLE artist (
     email VARCHAR(240) NOT NULL,
     password VARCHAR(240) NOT NULL,
     PRIMARY KEY (id)
-#     FOREIGN KEY (userId) REFERENCES users(id)
-#     ON DELETE CASCADE
 );
 
 

@@ -51,8 +51,5 @@
             <input type="submit" class="btn" value="Log In Here">
         </form>
     </div>
-<%--    <li><a href="/login">Login</a></li>--%>
-<%--    <li><a href="/logout">Logout</a></li>--%>
-<%--    <li><a href="/register">Register</a> </li>--%>
 </body>
 </html>

@@ -45,8 +45,6 @@ public class MySQLAdsDao implements Concerts {
             stmt.setString(2, concert.getGroupName());
             stmt.setString(3, concert.getTitle());
             stmt.setString(4, concert.getDescription());
-//            stmt.setString(5, String.valueOf(concert.getTicketPrice()));
-//            stmt.setString(6, String.valueOf(concert.getconcertDate()));
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -87,8 +85,6 @@ public class MySQLAdsDao implements Concerts {
         return new Concert(
             rs.getLong("id"),
             rs.getString("groupName"),
-//            rs.getString(String.valueOf(Float.parseFloat(("ticketPrice")))),
-//            rs.getDate(String.valueOf("concertDate")),
             rs.getString("title"),
             rs.getString("description")
         );

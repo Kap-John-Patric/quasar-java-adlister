@@ -44,12 +44,6 @@ public class Artist {
 
     }
 
-    //    public Artist(String username, String email, String password, String genre) {
-//        this.username = username;
-//        this.email = email;
-//        this.password = password;
-//        this.genre = genre;
-//    }
     public long getUserId() {
         return userId;
     }

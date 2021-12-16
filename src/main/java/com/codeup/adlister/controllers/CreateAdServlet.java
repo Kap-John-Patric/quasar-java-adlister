@@ -20,14 +20,9 @@ public class CreateAdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Concert concert = new Concert(
                 1, // for now we'll hardcode the user id
-//                request.getParameter("firstName"),
-//                request.getParameter("lastName"),
                 request.getParameter("groupName"),
                 request.getParameter("title"),
                 request.getParameter("description")
-//                request.getParameter("location"),
-//                request.getParameter("concertDate"),
-//                Float.parseFloat(request.getParameter("ticketPrice"))
         );
         DaoFactory.getConcertDao().insert(concert);
         response.sendRedirect("/ads");
