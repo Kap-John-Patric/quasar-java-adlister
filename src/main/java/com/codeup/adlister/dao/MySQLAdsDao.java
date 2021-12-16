@@ -71,6 +71,18 @@ public class MySQLAdsDao implements Concerts {
         }
     }
 
+    @Override
+    public void delete(Long id) {
+        try {
+            String insertQuery = "DELETE FROM concert WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting product #" + id, e);
+        }
+    }
+
     private Concert extractConcert(ResultSet rs) throws SQLException {
         return new Concert(
             rs.getLong("id"),
