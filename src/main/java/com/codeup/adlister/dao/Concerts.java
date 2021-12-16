@@ -11,4 +11,6 @@ public interface Concerts {
     Long insert(Concert concert);
 
     List<Concert> searchAds(String name);
+
+    void delete(Long id);
 }

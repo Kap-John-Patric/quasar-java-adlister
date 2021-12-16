@@ -32,9 +32,10 @@
             <h1>${ad.groupName}</h1>
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-<%--            <p>${ad.location}</p>--%>
-<%--            <p>${ad.concertDate}</p>--%>
-<%--            <p>${ad.ticketPrice}</p>--%>
+        <form action="/ads/delete" method="post">
+            <input type="hidden" name="concert_id" value="${ad.id}">
+            <input class="btn btn-danger btn-sm" type="submit" value="Delete">
+        </form>
         </div>
     </c:forEach>
 </div>
