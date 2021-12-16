@@ -4,6 +4,25 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
+    <style>
+        body {
+            background-image: url("/images/concertBg.jpeg");
+            opacity: .99;
+            background-size: cover;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed;
+            background-position: bottom;
+            color: rgb(234, 234, 234);
+        }
+        div {
+            background-color: #731ddd;
+            opacity: .85;
+        }
+        .btn {
+            background-color: #39047c;
+            color: rgb(234, 234, 234);
+        }
+    </style>
 </head>
 <body>
 
@@ -92,7 +111,7 @@
         </div>
     </div>
     <div class="col-md-12 mb-3">
-        <button class="btn btn-primary" type="submit">Submit form</button>
+        <button class="btn" type="submit">Submit form</button>
     </div>
 
 </form>

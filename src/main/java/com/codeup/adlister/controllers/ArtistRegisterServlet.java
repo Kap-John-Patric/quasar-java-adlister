@@ -48,7 +48,7 @@ public class ArtistRegisterServlet extends HttpServlet {
         System.out.println(artist.getPassword());
         System.out.println(artist);
         DaoFactory.getArtistsDao().insert(artist);
-        response.sendRedirect("/profile");
+//        response.sendRedirect("/profile");
 
         response.sendRedirect("/ads/create");
 
