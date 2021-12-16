@@ -28,19 +28,6 @@ public class ArtistRegisterServlet extends HttpServlet {
         String genre = request.getParameter("genre");
         String passwordConfirmation = request.getParameter("confirmPassword");
 
-        // validate input
-//        boolean inputHasErrors = firstName.isEmpty()
-//                || lastName.isEmpty()
-//                || username.isEmpty()
-//                || password.isEmpty()
-//                || (!password.equals(passwordConfirmation));
-//
-//
-//        if (inputHasErrors) {
-//            response.sendRedirect("/artist-register");
-//            return;
-//        }
-
         // create and save a new artist
         Artist artist = new Artist(firstName, lastName, username, email, password);
         System.out.println(artist.getFirstName());

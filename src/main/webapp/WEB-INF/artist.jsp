@@ -76,29 +76,6 @@
             </div>
         </div>
     </div>
-<%--    <div class="form-row">--%>
-<%--        <div class="col-md-6 mb-3">--%>
-<%--            <label for="validationCustom03">City</label>--%>
-<%--            <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>--%>
-<%--            <div class="invalid-feedback">--%>
-<%--                Please enter a valid city.--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="col-md-3 mb-3">--%>
-<%--            <label for="validationCustom04">State</label>--%>
-<%--            <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>--%>
-<%--            <div class="invalid-feedback">--%>
-<%--                Please provide a valid state.--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="col-md-3 mb-3">--%>
-<%--            <label for="validationCustom05">Zip</label>--%>
-<%--            <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>--%>
-<%--            <div class="invalid-feedback">--%>
-<%--                Please provide a valid zip.--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
     <div class="col-md-12 mb-4">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>

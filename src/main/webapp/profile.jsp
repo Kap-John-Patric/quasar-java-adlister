@@ -35,15 +35,5 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
-<%--    <div class="container">--%>
-<%--        <h1>Here are all the Concerts!</h1>--%>
-
-<%--        <c:forEach var="concert" items="${concert}">--%>
-<%--            <div>--%>
-<%--                <h2>${concert.username}</h2>--%>
-<%--                <p>${concert.email}</p>--%>
-<%--            </div>--%>
-<%--        </c:forEach>--%>
-<%--    </div>--%>
 </body>
 </html>
