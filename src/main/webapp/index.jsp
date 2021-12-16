@@ -28,7 +28,7 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Welcome to the Artist-lister!</h1>
+        <h1>Welcome to Live and Local</h1>
     </div>
     <br>
     <div class="container">
