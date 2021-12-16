@@ -6,8 +6,9 @@ import com.codeup.adlister.models.Concert;
 import java.util.List;
 
 public interface Artists {
-    Artist findByTitle(String title);
+    Artist findByTitle(String username);
     Long insert(Artist artists);
 
     List<Concert> searchAds(String name);
+
 }
