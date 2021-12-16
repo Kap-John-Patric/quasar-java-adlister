@@ -1,4 +1,10 @@
 <nav class="navbar navbar-default">
+    <style>
+        a  {
+            background-color: #39047c;
+            color: rgb(234, 234, 234);
+        }
+    </style>
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">

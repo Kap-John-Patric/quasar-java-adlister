@@ -4,6 +4,25 @@
     <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Register For Artist-Lister!"/>
     </jsp:include>
+    <style>
+        body {
+            background-image: url("/images/concertBg.jpeg");
+            opacity: .99;
+            background-size: cover;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed;
+            background-position: bottom;
+            color: rgb(234, 234, 234);
+        }
+        div {
+            background-color: #731ddd;
+            opacity: .85;
+        }
+        .btn {
+            background-color: #39047c;
+            color: rgb(234, 234, 234);
+        }
+    </style>
 </head>
 <body>
 <jsp:include page="partials/navbar.jsp"/>
@@ -37,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <input type="submit" class="btn btn-primary btn-block">
+        <input type="submit" class="btn btn-block">
     </form>
 </div>
 </body>

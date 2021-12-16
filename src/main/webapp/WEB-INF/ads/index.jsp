@@ -5,12 +5,27 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
+    <style>
+        body {
+            background-image: url("images/concertBg.jpeg");
+            opacity: .99;
+            background-size: cover;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed;
+            background-position: bottom;
+            color: rgb(234, 234, 234);
+        }
+        div {
+            background-color: #731ddd;
+            opacity: .85;
+        }
+    </style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Here Are all the Concerts!</h1>
+    <h1>Here are all the Concerts!</h1>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
