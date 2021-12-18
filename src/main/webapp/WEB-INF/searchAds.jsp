@@ -22,7 +22,6 @@
     </style>
 </head>
 <body>
-
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
 <h1>Here are all your searched for ads!</h1>
@@ -38,5 +37,5 @@
         </div>
     </c:forEach>
 </div>
-    </body>
+</body>
   </html>

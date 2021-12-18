@@ -14,7 +14,7 @@
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Logout</a></li>
             <li><a href="/register">Register</a> </li>
-            <li><a href="/searchAds.jsp">Search</a> </li>
+            <li><a href="/searchAds">Search</a> </li>
             <li><a href="/ads/create">Create</a></li>
             <li><a href="/profile.jsp">Profile</a></li>
         </ul>
