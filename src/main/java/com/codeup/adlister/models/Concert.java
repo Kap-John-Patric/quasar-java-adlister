@@ -3,33 +3,43 @@ package com.codeup.adlister.models;
 import java.util.Date;
 
 public class Concert {
+    public float getPrice;
     private long user_id;
     private long id;
-    private String groupName;
+    private String group_name;
     private String title;
-    private String description;
-    private Date concertDate;
-    private float ticketPrice;
 
-    public Concert(long user_id, long id, String groupName, String title, String description, Date concertDate, float ticketPrice) {
+    public Concert(float getPrice, long user_id, long id, String group_name, String title, String location, Date date, float price) {
+        this.getPrice = getPrice;
         this.user_id = user_id;
         this.id = id;
-        this.groupName = groupName;
+        this.group_name = group_name;
         this.title = title;
-        this.description = description;
-        this.concertDate = concertDate;
-        this.ticketPrice = ticketPrice;
+        this.location = location;
+        this.date = date;
+        this.price = price;
     }
 
-    public Concert(long id, String groupName, String title, String description) {
-        this.id = id;
-        this.groupName = groupName;
-        this.title = title;
-        this.description = description;
+    private String location;
+
+    public Concert(String group_name, String title, String location, String date, String price) {
+
     }
 
+    public void setGetPrice(float getPrice) {
+        this.getPrice = getPrice;
+    }
 
-    public Concert(long id, String groupName, String string, java.sql.Date concertDate, String title, String description) {
+    public float getGetPrice() {
+        return getPrice;
+    }
+
+    private Date date;
+
+    public Concert(int user_id, String groupname, String title, String location, String date, String price) {
+    }
+
+    public Concert(long id, String groupName, String title, String location, java.sql.Date date, float price) {
     }
 
     public long getUser_id() {
@@ -48,12 +58,12 @@ public class Concert {
         this.id = id;
     }
 
-    public String getGroupName() {
-        return groupName;
+    public String getGroupname() {
+        return group_name;
     }
 
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
+    public void setGroupname(String groupname) {
+        this.group_name = groupname;
     }
 
     public String getTitle() {
@@ -64,33 +74,45 @@ public class Concert {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getLocation() {
+        return location;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public Date getconcertDate() {
-        return concertDate;
+    public java.sql.Date getDate() {
+        return (java.sql.Date) date;
     }
 
-    public void setconcertDate(Date concertDate) {
-        this.concertDate = concertDate;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public float getTicketPrice() {
-        return ticketPrice;
+    public float getPrice() {
+        return price;
     }
 
-    public void setTicketPrice(float ticketPrice) {
-        this.ticketPrice = ticketPrice;
+    public void setPrice(float price) {
+        this.price = price;
     }
 
+    public Concert(long user_id, long id, String groupname, String title, String location, Date date, float price) {
+        this.user_id = user_id;
+        this.id = id;
+        this.group_name = groupname;
+        this.title = title;
+        this.location = location;
+        this.date = date;
+        this.price = price;
+    }
+
+    private float price;
+
+
+    public String getGroup_name() {
+        return group_name;
+    }
 }
-
-
-
-
 

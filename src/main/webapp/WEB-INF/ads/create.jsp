@@ -26,20 +26,29 @@
     </style>
 </head>
 <body>
+    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Setup your next Concert</h1>
-        <form action="/ads/create" method="post">
+        <form action="/ads" >
             <div class="form-group">
-                <label for="groupName">Artist Name</label>
-                <input id="groupName" name="groupName" class="form-control" type="text">
+                <label for="group_name">Artist Name</label>
+                <input id="group_name" name="group_name" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <label for="title">Title</label>
                 <input id="title" name="title" class="form-control" type="text">
             </div>
             <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" name="description" class="form-control" type="text" placeholder="Include Concert Date, Location, Ticket Price"></textarea>
+                <label for="location">Location</label>
+                <textarea id="location" name="location" class="form-control" type="text" placeholder=" Location"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <textarea id="date" name="date" class="form-control" type="text" placeholder=" Date"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <textarea id="price" name="price" class="form-control" type="text" placeholder=" Price"></textarea>
             </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>

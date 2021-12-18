@@ -5,19 +5,37 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads"/>
     </jsp:include>
+    <style>
+        body {
+            background-image: url("images/concertBg.jpeg");
+            opacity: .99;
+            background-size: cover;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed;
+            background-position: bottom;
+            color: rgb(234, 234, 234);
+        }
+        div {
+            background-color: #731ddd;
+            opacity: .85;
+        }
+    </style>
 </head>
 <body>
-
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
-<h1>Here Are all your searched for ads!</h1>
-    <c:forEach var="searchedAds" items="${ads}">
+<h1>Here are all your searched for ads!</h1>
+    <c:forEach var="searchAds" items="${ad}">
         <div class="col-md-6">
-            <h2>${searchedAds.title}</h2>
-            <p>${searchedAds.description}</p>
+            <h2>${searchAds.group_name}</h2>
+            <p>${searchAds.title}</p>
+            <form action="/searchAds" method="post">
+                <input type="hidden" name="concert_id" value="${ad.id}">
+                <input class="btn btn-danger btn-sm" type="submit" value="Search">
+            </form>
             <p>Hello!</p>
         </div>
     </c:forEach>
-    </div>
-    </body>
+</div>
+</body>
   </html>

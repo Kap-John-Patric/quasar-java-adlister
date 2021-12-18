@@ -25,7 +25,7 @@ public class ArtistRegisterServlet extends HttpServlet {
         String username = request.getParameter("userName");
         String email = request.getParameter("eMail");
         String password = request.getParameter("password");
-        String genre = request.getParameter("genre");
+//        String genre = request.getParameter("genre");
         String passwordConfirmation = request.getParameter("confirmPassword");
 
         // create and save a new artist

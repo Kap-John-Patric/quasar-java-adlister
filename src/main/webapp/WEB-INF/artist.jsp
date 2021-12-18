@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <%--    Bootstrap form with valid/invalid inputs--%>
 <form action="/artist-register" method="post" class="needs-validation" novalidate>
     <div class="form-row">

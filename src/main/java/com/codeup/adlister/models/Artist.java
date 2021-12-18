@@ -5,7 +5,6 @@ import com.codeup.adlister.util.Password;
 import java.util.Date;
 
 public class Artist {
-    private long userId;
 
 
     private long id;
@@ -18,8 +17,10 @@ public class Artist {
     private String genre;
     private Date concertDate;
     private Float ticketPrice;
+    private long user_id;
 
-    public Artist() {
+    public Artist(long user_id) {
+        this.user_id = user_id;
     }
 
     public Artist(String firstName, String lastName, String username, String email, String password) {
@@ -44,12 +45,9 @@ public class Artist {
 
     }
 
-    public long getUserId() {
-        return userId;
-    }
 
-    public void setUserId(long userId) {
-        this.userId = userId;
+
+    public void setUser_id(long userId) {
     }
 
     public long getId() {
@@ -131,4 +129,11 @@ public class Artist {
     public void setTicketPrice(Float ticketPrice) {
         this.ticketPrice = ticketPrice;
     }
+
+
+    public long getUser_id() {
+        return user_id;
+    }
+
+
 }

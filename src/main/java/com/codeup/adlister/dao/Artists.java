@@ -11,4 +11,5 @@ public interface Artists {
 
     List<Concert> searchAds(String name);
 
+    Object all();
 }

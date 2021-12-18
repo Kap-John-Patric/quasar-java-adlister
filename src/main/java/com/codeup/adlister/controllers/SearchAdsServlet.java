@@ -1,6 +1,9 @@
 package com.codeup.adlister.controllers;
 
 
+import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +14,13 @@ import java.io.IOException;
 @WebServlet(name = "controllers/SearchAdsServlet", urlPatterns = "/searchAds")
     public class SearchAdsServlet extends HttpServlet {
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            request.getRequestDispatcher("/WEB-INF/ads/searchAds.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/searchAds.jsp").forward(request, response);
+        }
+
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+            String username = request.getParameter("group_name");
+            String password = request.getParameter("title");
+            User user = DaoFactory.getUsersDao().findByUsername(username);
+            response.sendRedirect("/ads");
         }
 }
