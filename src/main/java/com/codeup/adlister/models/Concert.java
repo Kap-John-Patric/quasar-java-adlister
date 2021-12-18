@@ -6,9 +6,30 @@ public class Concert {
     public float getPrice;
     private long user_id;
     private long id;
-    private String groupname;
+    private String group_name;
     private String title;
+
+    public Concert(float getPrice, long user_id, long id, String group_name, String title, String location, Date date, float price) {
+        this.getPrice = getPrice;
+        this.user_id = user_id;
+        this.id = id;
+        this.group_name = group_name;
+        this.title = title;
+        this.location = location;
+        this.date = date;
+        this.price = price;
+    }
+
     private String location;
+
+    public void setGetPrice(float getPrice) {
+        this.getPrice = getPrice;
+    }
+
+    public float getGetPrice() {
+        return getPrice;
+    }
+
     private Date date;
 
     public Concert(int user_id, String groupname, String title, String location, String date, String price) {
@@ -34,11 +55,11 @@ public class Concert {
     }
 
     public String getGroupname() {
-        return groupname;
+        return group_name;
     }
 
     public void setGroupname(String groupname) {
-        this.groupname = groupname;
+        this.group_name = groupname;
     }
 
     public String getTitle() {
@@ -76,7 +97,7 @@ public class Concert {
     public Concert(long user_id, long id, String groupname, String title, String location, Date date, float price) {
         this.user_id = user_id;
         this.id = id;
-        this.groupname = groupname;
+        this.group_name = groupname;
         this.title = title;
         this.location = location;
         this.date = date;
@@ -86,5 +107,8 @@ public class Concert {
     private float price;
 
 
+    public String getGroup_name() {
+        return group_name;
+    }
 }
 

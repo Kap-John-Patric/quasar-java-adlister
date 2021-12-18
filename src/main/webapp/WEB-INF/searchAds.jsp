@@ -25,18 +25,18 @@
 
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
-<h1>Here Are all your searched for ads!</h1>
-    <c:forEach var="searchedAds" items="${ads}">
+<h1>Here are all your searched for ads!</h1>
+    <c:forEach var="searchAds" items="${ads}">
         <div class="col-md-6">
-            <h2>${searchedAds.title}</h2>
-<%--            <p>${searchedAds.description}</p>--%>
-            <form action="/WEB-INF/ads/searchAds" method="post">
+            <h2>${searchAds.title}</h2>
+            <p>${searchAds.description}</p>
+            <form action="/searchAds" method="post">
                 <input type="hidden" name="concert_id" value="${ad.id}">
                 <input class="btn btn-danger btn-sm" type="submit" value="Search">
             </form>
             <p>Hello!</p>
         </div>
     </c:forEach>
-    </div>
+</div>
     </body>
   </html>

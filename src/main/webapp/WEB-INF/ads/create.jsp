@@ -29,7 +29,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Setup your next Concert</h1>
-        <form action="/ads" method="post">
+        <form action="/ads" >
             <div class="form-group">
                 <label for="group_name">Artist Name</label>
                 <input id="group_name" name="group_name" class="form-control" type="text">
@@ -41,16 +41,15 @@
             <div class="form-group">
                 <label for="location">Location</label>
                 <textarea id="location" name="location" class="form-control" type="text" placeholder=" Location"></textarea>
-            </div><div class="form-group">
-            <label for="date">Date</label>
-            <textarea id="date" name="date" class="form-control" type="text" placeholder=" Date"></textarea>
-            </div><div class="form-group">
-            <label for="price">Price</label>
-            <textarea id="price" name="price" class="form-control" type="text" placeholder=" Price"></textarea>
             </div>
-
-
-
+            <div class="form-group">
+                <label for="date">Date</label>
+                <textarea id="date" name="date" class="form-control" type="text" placeholder=" Date"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <textarea id="price" name="price" class="form-control" type="text" placeholder=" Price"></textarea>
+            </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>

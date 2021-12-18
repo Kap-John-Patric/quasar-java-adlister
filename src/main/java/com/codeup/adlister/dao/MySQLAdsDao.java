@@ -42,7 +42,7 @@ public class MySQLAdsDao implements Concerts {
             String insertQuery = "INSERT INTO concert(user_id, group_name, title, location, date, price) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, concert.getUser_id());
-            stmt.setString(2, concert.getGroupname());
+            stmt.setString(2, concert.getGroup_name());
             stmt.setString(3, concert.getTitle());
             stmt.setString(4, concert.getLocation());
             stmt.setDate(5, (Date) concert.getDate());
@@ -86,7 +86,7 @@ public class MySQLAdsDao implements Concerts {
     private Concert extractConcert(ResultSet rs) throws SQLException {
         return new Concert(
             rs.getLong("id"),
-            rs.getString("groupName"),
+            rs.getString("group_name"),
             rs.getString("title"),
             rs.getString("location"),
             rs.getDate("date"),
