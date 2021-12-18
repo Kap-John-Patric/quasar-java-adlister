@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <title>Local Concerts</title>
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
@@ -29,13 +30,19 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <h1>${ad.groupName}</h1>
+            <h1>${ad.group_name}</h1>
             <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
-        <form action="/ads/delete" method="post">
-            <input type="hidden" name="concert_id" value="${ad.id}">
-            <input class="btn btn-danger btn-sm" type="submit" value="Delete">
-        </form>
+                <p>${ad.location}</p>
+                <p>${ad.date}</p>
+                <p>${ad.price}</p>
+            <form action="/ads/delete" method="post">
+                <input type="hidden" name="concert_id" value="${ad.id}">
+                <input class="btn btn-danger btn-sm" type="submit" value="Delete">
+            </form>
+            <form action="/ads/edit" method="post">
+                <input type="hidden" name="concert_id" value="${ad.id}">
+                <input class="btn btn-danger btn-sm" type="submit" value="Edit">
+            </form>
         </div>
     </c:forEach>
 </div>

@@ -47,16 +47,16 @@ public class MySQLArtistDao implements Artists {
             result.getLong("id"),
             result.getString("firstName"),
             result.getString("lastName"),
-            result.getString("bandName")
+            result.getString("groupName")
             );
     }
 
     @Override
     public Long insert(Artist artists) {
-        String query = "INSERT INTO artist(userId, username, firstName,lastName, email, password) VALUES (?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO artist(user_id, username, firstName,lastName, email, password) VALUES (?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-            stmt.setLong(1, artists.getUserId());
+            stmt.setLong(1, artists.getUser_id());
             stmt.setString(2, artists.getUsername());
             stmt.setString(3, artists.getFirstName());
             stmt.setString(4, artists.getLastName());

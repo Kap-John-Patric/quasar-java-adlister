@@ -22,11 +22,11 @@ public class ViewProfileServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String username = request.getParameter("username");
-        String genre = request.getParameter("genre");
-        String concert_date = request.getParameter("concert_date");
+        String username = request.getParameter("artist");
+        String title = request.getParameter("title");
         String location = request.getParameter("location");
-        String ticketprice = request.getParameter("ticketprice");
+        String date = request.getParameter("date");
+        String price = request.getParameter("price");
 
     }
 

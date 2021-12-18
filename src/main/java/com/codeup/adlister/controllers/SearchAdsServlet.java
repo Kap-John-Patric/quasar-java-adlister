@@ -11,6 +11,6 @@ import java.io.IOException;
 @WebServlet(name = "controllers/SearchAdsServlet", urlPatterns = "/searchAds")
     public class SearchAdsServlet extends HttpServlet {
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            request.getRequestDispatcher("/WEB-INF/ads/searchAds.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/ads/searchAds").forward(request, response);
         }
 }

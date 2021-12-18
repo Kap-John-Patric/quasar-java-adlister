@@ -16,33 +16,34 @@ CREATE TABLE users (
 
 CREATE TABLE concert (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    userId INT UNSIGNED NOT NULL,
-    groupName VARCHAR(240) NOT NULL,
+    user_id INT UNSIGNED NOT NULL,
+    group_name VARCHAR(240) NOT NULL,
     title VARCHAR(240) NOT NULL,
-    description TEXT NOT NULL,
-    concertDate DATE,
-    ticketPrice FLOAT,
+    location TEXT NOT NULL,
+    date DATE,
+    price FLOAT,
     PRIMARY KEY (id)
 );
 
 CREATE TABLE location (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    userId INT UNSIGNED NOT NULL,
+    user_id INT UNSIGNED NOT NULL,
     title VARCHAR(240) NOT NULL,
     description TEXT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (userId) REFERENCES users(id)
+    FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
 );
 
 CREATE TABLE artist (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    userId INT UNSIGNED NOT NULL,
+    user_id INT UNSIGNED NOT NULL,
     username VARCHAR(240) NOT NULL,
     firstName VARCHAR(240) NOT NULL,
     lastName VARCHAR(240) NOT NULL,
     email VARCHAR(240) NOT NULL,
     password VARCHAR(240) NOT NULL,
+    group_name VARCHAR (240) NOT NULL,
     PRIMARY KEY (id)
 );
 
