@@ -22,6 +22,10 @@ public class Concert {
 
     private String location;
 
+    public Concert(String group_name, String title, String location, String date, String price) {
+
+    }
+
     public void setGetPrice(float getPrice) {
         this.getPrice = getPrice;
     }
@@ -78,8 +82,8 @@ public class Concert {
         this.location = location;
     }
 
-    public Date getDate() {
-        return date;
+    public java.sql.Date getDate() {
+        return (java.sql.Date) date;
     }
 
     public void setDate(Date date) {

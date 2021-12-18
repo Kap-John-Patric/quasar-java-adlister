@@ -11,7 +11,7 @@ public class DaoFactory {
 
     public static Concerts getConcertDao() {
         if (concertDao == null) {
-            concertDao = (Concerts) new MySQLAdsDao(config);
+            concertDao = new MySQLAdsDao(config);
         }
         return concertDao;
     }

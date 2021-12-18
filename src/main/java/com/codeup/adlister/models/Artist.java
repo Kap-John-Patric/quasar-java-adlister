@@ -5,7 +5,6 @@ import com.codeup.adlister.util.Password;
 import java.util.Date;
 
 public class Artist {
-    private long userId;
 
 
     private long id;
@@ -49,7 +48,6 @@ public class Artist {
 
 
     public void setUser_id(long userId) {
-        this.userId = userId;
     }
 
     public long getId() {

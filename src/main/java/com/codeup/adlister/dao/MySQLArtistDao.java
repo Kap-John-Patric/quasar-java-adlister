@@ -76,4 +76,9 @@ public class MySQLArtistDao implements Artists {
         return null;
     }
 
+    @Override
+    public Object all() {
+        return null;
+    }
+
 }

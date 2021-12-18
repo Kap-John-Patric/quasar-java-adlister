@@ -15,19 +15,23 @@ import java.io.IOException;
 @WebServlet(name = "controllers.ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("user") == null) {
-            response.sendRedirect("/profile");
-        }
+        request.setAttribute(
+                "artists",
+                DaoFactory.getArtistsDao().all()
+        );
+        request.getRequestDispatcher("/WEB_INF/artists.jsp").forward(request,response);
 
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String username = request.getParameter("artist");
-        String title = request.getParameter("title");
-        String location = request.getParameter("location");
-        String date = request.getParameter("date");
-        String price = request.getParameter("price");
-
-    }
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+//        String username = request.getParameter("artist");
+//        String title = request.getParameter("title");
+//        String location = request.getParameter("location");
+//        String date = request.getParameter("date");
+//        String price = request.getParameter("price");
+//        User user = DaoFactory.getUsersDao().findByUsername(username);
+//        response.sendRedirect("profile");
+//
+//    }
 
 }

@@ -17,11 +17,11 @@ CREATE TABLE users (
 CREATE TABLE concert (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,
-    group_name VARCHAR(240) NOT NULL,
+    group_name VARCHAR(240) NOT NULL DEFAULT 'N/A',
     title VARCHAR(240) NOT NULL,
     location TEXT NOT NULL,
-    date DATE,
-    price FLOAT,
+    date DATE NOT NULL,
+    price FLOAT NOT NULL,
     PRIMARY KEY (id)
 );
 
@@ -43,7 +43,7 @@ CREATE TABLE artist (
     lastName VARCHAR(240) NOT NULL,
     email VARCHAR(240) NOT NULL,
     password VARCHAR(240) NOT NULL,
-    group_name VARCHAR (240) NOT NULL,
+    group_name VARCHAR (240) NOT NULL DEFAULT 'N/A',
     PRIMARY KEY (id)
 );
 

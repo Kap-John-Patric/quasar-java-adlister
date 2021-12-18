@@ -45,7 +45,7 @@ public class MySQLAdsDao implements Concerts {
             stmt.setString(2, concert.getGroup_name());
             stmt.setString(3, concert.getTitle());
             stmt.setString(4, concert.getLocation());
-            stmt.setDate(5, (Date) concert.getDate());
+            stmt.setDate(5,  concert.getDate());
             stmt.setFloat(6, concert.getPrice);
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();

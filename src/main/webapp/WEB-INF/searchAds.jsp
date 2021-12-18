@@ -25,10 +25,10 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
 <h1>Here are all your searched for ads!</h1>
-    <c:forEach var="searchAds" items="${ads}">
+    <c:forEach var="searchAds" items="${ad}">
         <div class="col-md-6">
-            <h2>${searchAds.title}</h2>
-            <p>${searchAds.description}</p>
+            <h2>${searchAds.group_name}</h2>
+            <p>${searchAds.title}</p>
             <form action="/searchAds" method="post">
                 <input type="hidden" name="concert_id" value="${ad.id}">
                 <input class="btn btn-danger btn-sm" type="submit" value="Search">

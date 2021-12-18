@@ -26,13 +26,13 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
     <h1>Here are all the Concerts!</h1>
-    <c:forEach var="ad" items="${ad.ads}">
+    <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h1>${ad.group_name}</h1>
             <h2>${ad.title}</h2>
                 <p>${ad.location}</p>
                 <p>${ad.date}</p>
-                <p>${ad.price}</p>
+                <p>$${ad.price}</p>
             <form action="/ads/delete" method="post">
                 <input type="hidden" name="concert_id" value="${ad.id}">
                 <input class="btn btn-danger btn-sm" type="submit" value="Delete">

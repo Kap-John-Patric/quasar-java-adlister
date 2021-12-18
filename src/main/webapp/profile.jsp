@@ -28,31 +28,35 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Your Profile</h1>
-            <form action="/profile" method="post">
-        <div class ="form-group">
-            <label for="artist">Artist </label>
-            <input id="artist" name="artist" class="form-control" type="text">
-        </div>
-            <div class ="form-group">
-                <label for="genre">Genre</label>
-                <input id="genre" name="genre" class="form-control" type="text">
-            </div>
-            <div class ="form-group">
-                <label for="concert_date">Concert Dates</label>
-                <input id="concert_date" name="concert_date" class="form-control" type="text" placeholder="YEAR-MM-DD">
-            </div>
-            <div class ="form-group">
-                <label for="location">Locations</label>
-                <input id="location" name="location" class="form-control" type="text">
-            </div>
-            <div class ="form-group">
-                <label for="ticket_price">Ticket Price</label>
-                <input id="ticket_price" name="ticket_price" class="form-control">
-            </div>
-            <br>
-            <input type="submit" class="btn btn-primary btn-block">
-        </form>
+        <h1 class="my-3 text-center">Your Profile</h1>
+            <table class="table">
+                <thread>
+                <tr>
+                    <th>Username</th>
+                    <th>Firstname</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>Artist Name</th>
+                </tr>
+                </thread>
+                <c:forEach var="ad" items="${ads}">
+                    <div class="col-md-6">
+                        <h3>${ad.username}</h3>
+                        <h3>${ad.firstname}</h3>
+                        <h3>${ad.lastname}</h3>
+                        <h3>${ad.email}</h3>
+                        <h3>${ad.group_name}</h3>
+                        <form action="/ads/delete" method="post">
+                            <input type="hidden" name="concert_id" value="${ad.id}">
+                            <input class="btn btn-danger btn-sm" type="submit" value="Delete">
+                        </form>
+                        <form action="/ads/edit" method="post">
+                            <input type="hidden" name="concert_id" value="${ad.id}">
+                            <input class="btn btn-danger btn-sm" type="submit" value="Edit">
+                        </form>
+                    </div>
+                </c:forEach>
+            </table>
     </div>
 </body>
 </html>
